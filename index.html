@@ -300,9 +300,12 @@
       
         
           
-            <h1 id="机器学习的环节"><a href="#机器学习的环节" class="headerlink" title="机器学习的环节"></a>机器学习的环节</h1><h2 id="确定要完成的任务是回归问题还是分类问题"><a href="#确定要完成的任务是回归问题还是分类问题" class="headerlink" title="确定要完成的任务是回归问题还是分类问题"></a>确定要完成的任务是回归问题还是分类问题</h2><p>回归问题：输出的对象是有实际意义的数字，如PM2.5预测<br>分类问题：输出的对象是类别，有二元分类和多元分类之分，如数字识别<br>Structure learning：输出的对象是有特定顺序或结构的，如语音识别句子</p>
-<h2 id="选模型"><a href="#选模型" class="headerlink" title="选模型"></a>选模型</h2><p>分类：线性模型和非线性模型。非线性模型有：deep learning，SVM，decision tree，K-NN</p>
-<h2 id="训练模型"><a href="#训练模型" class="headerlink" title="训练模型"></a>训练模型</h2><p>Supervise learning：只用训练集<br>Semi-supervised learning：训练集+测试集（不带标签）<br>Transfer learning：训练集+不相关数据<br>Unsupervised learning：无数据，从一大堆文章等中训练<br>Reinforcement learning：从评价中学习</p>
+            <h1 id="一、机器学习的环节"><a href="#一、机器学习的环节" class="headerlink" title="一、机器学习的环节"></a>一、机器学习的环节</h1><h2 id="1、确定要完成的任务是回归问题还是分类问题"><a href="#1、确定要完成的任务是回归问题还是分类问题" class="headerlink" title="1、确定要完成的任务是回归问题还是分类问题"></a>1、确定要完成的任务是回归问题还是分类问题</h2><p>回归问题：输出的对象是有实际意义的数字，如PM2.5预测<br>分类问题：输出的对象是类别，有二元分类和多元分类之分，如数字识别<br>Structure learning：输出的对象是有特定顺序或结构的，如语音识别句子</p>
+<h2 id="2、选模型"><a href="#2、选模型" class="headerlink" title="2、选模型"></a>2、选模型</h2><p>分类：线性模型和非线性模型。非线性模型有：deep learning，SVM，decision tree，K-NN</p>
+<h2 id="3、训练模型"><a href="#3、训练模型" class="headerlink" title="3、训练模型"></a>3、训练模型</h2><p>Supervise learning：只用训练集<br>Semi-supervised learning：训练集+测试集（不带标签）<br>Transfer learning：训练集+不相关数据<br>Unsupervised learning：无数据，从一大堆文章等中训练<br>Reinforcement learning：从评价中学习</p>
+<h1 id="二、举例解决regression的问题：宝可梦进化（基础版）"><a href="#二、举例解决regression的问题：宝可梦进化（基础版）" class="headerlink" title="二、举例解决regression的问题：宝可梦进化（基础版）"></a>二、举例解决regression的问题：宝可梦进化（基础版）</h1><p>1、找模型：线性模型——》y=b+w<em>x1<br>2、用一堆training data来找最好的w,b——》当loss最小时，参数最好——》用梯度下降来找loss最小时的参数值<br>3、梯度下降<br>A、随机找W0<br>B、更新参数：W1=W0–r</em>g0，r暂代learning rate，g0是loss在w0处的积分，W2=W1–r*g1<br>C、当积分变成0时，参数更新不了了，停下来<br>弊端：当loss的图像很复杂，有多个弯儿时，到不了最低的地方，在平滑处或第一个不是最低的沟里停下来，但线性模型并不存在这个问题。</p>
+<h1 id="三、举例解决regression的问题：宝可梦进化（改良版）"><a href="#三、举例解决regression的问题：宝可梦进化（改良版）" class="headerlink" title="三、举例解决regression的问题：宝可梦进化（改良版）"></a>三、举例解决regression的问题：宝可梦进化（改良版）</h1><p>基础版是为了方便理解，但效果并不好，还需一些改良。<br>效果不好时，首先要检查下训练集上的效果好不好，其次再检查测试集上的效果好不好。</p>
+<p>##（一）训练集上不好：<br>加二次项、三次项等：y=b+w1<em>x1+w2</em>(x1)^2+w3*(x1)^3，图像如下：<br><img src="桌面/图片1" alt="Aaron Swartz"></p>
 
           
         
