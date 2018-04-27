@@ -229,6 +229,253 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/协方差矩阵/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="杜成玉">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="学习札记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/27/协方差矩阵/" itemprop="url">协方差矩阵</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-27T17:20:28+08:00">
+                2018-04-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="../../images/微信图片1.png" alt="Alt text"><br><img src="../../images/微信图片2.png" alt="Alt text"><br><img src="../../images/微信图片3.png" alt="Alt text"><br><img src="../../images/微信图片4.png" alt="Alt text"><br><img src="../../images/微信图片5.png" alt="Alt text"></p>
+<h1 id="原文地址："><a href="#原文地址：" class="headerlink" title="原文地址："></a>原文地址：</h1><p><a href="http://pinkyjie.com/2010/08/31/covariance/" target="_blank" rel="noopener">http://pinkyjie.com/2010/08/31/covariance/</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/李宏毅机器学习梳理2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="杜成玉">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="学习札记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/27/李宏毅机器学习梳理2/" itemprop="url">李宏毅机器学习梳理2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-27T16:05:18+08:00">
+                2018-04-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="分类问题"><a href="#分类问题" class="headerlink" title="分类问题"></a>分类问题</h1><h2 id="一、Generative-model"><a href="#一、Generative-model" class="headerlink" title="一、Generative model"></a>一、Generative model</h2><p>1、求x在每个类别的概率，类似这个问题：下图<br><img src="../../images/2图片1.png" alt="Alt text"><br>2、举例：79个宝可梦是水系，61个宝可梦是非水系，求随便一只宝可梦为水系的概率？<br>3、<img src="../../images/2图片2.png" alt="Alt text"><br>关键是求出x出自水系的概率，这时要用到高斯分布<br>用下图公式求出u等<br><img src="../../images/2图片4.png" alt="Alt text"><br>4、求出概率后，概率大于50%，则是水系，否则是非水系<br>5、改进方法：将两类的西格玛设成一样的，来减少参数量，公式如下：<br><img src="../../images/2图片5.png" alt="Alt text"></p>
+<h2 id="二、Logistic-regression"><a href="#二、Logistic-regression" class="headerlink" title="二、Logistic regression"></a>二、Logistic regression</h2><p>将概率公式经以下推导<br><img src="../../images/2图片6.png" alt="Alt text"><br>再将z经过一堆推导，变成如下样子：<br><img src="../../images/2图片7.png" alt="Alt text"><br> 求参数w、b，就变成了Logistic regression</p>
+<h3 id="（一）Logistic-regression步骤（与linear-regression对比）"><a href="#（一）Logistic-regression步骤（与linear-regression对比）" class="headerlink" title="（一）Logistic regression步骤（与linear regression对比）"></a>（一）Logistic regression步骤（与linear regression对比）</h3><p> 1、函数<br> <img src="../../images/2图片8.png" alt="Alt text"><br> 2、损失函数<br> 这里的损失函数不用loss，而是用cross entropy，cross entropy是算两个分布的相似度的函数，越接近0越相似，所以就是要找能让cross entropy最小的w、b<br> <img src="../../images/2图片9.png" alt="Alt text"><br> 3、找最好参数<br> 还是用梯度下降法，而且cross entropy的偏微分还是和linear regression的一样，下图<br> <img src="../../images/2图片10.png" alt="Alt text"></p>
+<h3 id="（二）补充"><a href="#（二）补充" class="headerlink" title="（二）补充"></a>（二）补充</h3><h4 id="1、为什么用cross-entropy，而不用loss？"><a href="#1、为什么用cross-entropy，而不用loss？" class="headerlink" title="1、为什么用cross entropy，而不用loss？"></a>1、为什么用cross entropy，而不用loss？</h4><p> 因为经过sigmoid函数后，值都在0-1之间，目标值不是0就是1，他们之间的差距较小，所以用loss的话，参数更新的特别慢，见下图：<br> <img src="../../images/2图片11.png" alt="Alt text"></p>
+<h4 id="2、Discriminative和Generative的结果完全一样吗？"><a href="#2、Discriminative和Generative的结果完全一样吗？" class="headerlink" title="2、Discriminative和Generative的结果完全一样吗？"></a>2、Discriminative和Generative的结果完全一样吗？</h4><p> 不一样，用Logistic regression直接求参数w、b的方法就是Discriminative<br> 当数据量很小或有杂质时用Generative方法好。</p>
+<h2 id="三、Multi-class-Classification（多分类）"><a href="#三、Multi-class-Classification（多分类）" class="headerlink" title="三、Multi-class Classification（多分类）"></a>三、Multi-class Classification（多分类）</h2><p> 多分类时要用softmax，与推导sigmoid函数一样，用高斯分布求出概率后经过一系列的化简可得到softmax函数。</p>
+<h2 id="四、deep-learning"><a href="#四、deep-learning" class="headerlink" title="四、deep learning"></a>四、deep learning</h2><p> Logistic regression的局限如图：<br> <img src="../../images/2图片12.png" alt="Alt text"><br> 当类别分布在对角线的两端，这时不能进行分类，需要进行特征转换来分类，常用办法就是再加一层，如图：<br> <img src="../../images/2图片13.png" alt="Alt text"><br> 这时就是deep learning……</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/21/李宏毅机器学习梳理1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -306,7 +553,7 @@
 <h1 id="二、举例解决regression的问题：宝可梦进化（基础版）"><a href="#二、举例解决regression的问题：宝可梦进化（基础版）" class="headerlink" title="二、举例解决regression的问题：宝可梦进化（基础版）"></a>二、举例解决regression的问题：宝可梦进化（基础版）</h1><h2 id="1、找模型：线性模型——》y-b-w-x1"><a href="#1、找模型：线性模型——》y-b-w-x1" class="headerlink" title="1、找模型：线性模型——》y=b+w*x1"></a>1、找模型：线性模型——》y=b+w*x1</h2><h2 id="2、用一堆training-data来找最好的w-b——》当loss最小时，参数最好——》用梯度下降来找loss最小时的参数值"><a href="#2、用一堆training-data来找最好的w-b——》当loss最小时，参数最好——》用梯度下降来找loss最小时的参数值" class="headerlink" title="2、用一堆training data来找最好的w,b——》当loss最小时，参数最好——》用梯度下降来找loss最小时的参数值"></a>2、用一堆training data来找最好的w,b——》当loss最小时，参数最好——》用梯度下降来找loss最小时的参数值</h2><h2 id="3、梯度下降"><a href="#3、梯度下降" class="headerlink" title="3、梯度下降"></a>3、梯度下降</h2><h3 id="A、随机找W0"><a href="#A、随机找W0" class="headerlink" title="A、随机找W0"></a>A、随机找W0</h3><h3 id="B、更新参数：W1-W0–rg0，r暂代learning-rate，g0是loss在w0处的积分，W2-W1–rg1"><a href="#B、更新参数：W1-W0–rg0，r暂代learning-rate，g0是loss在w0处的积分，W2-W1–rg1" class="headerlink" title="B、更新参数：W1=W0–rg0，r暂代learning rate，g0是loss在w0处的积分，W2=W1–rg1"></a>B、更新参数：W1=W0–r<em>g0，r暂代learning rate，g0是loss在w0处的积分，W2=W1–r</em>g1</h3><h3 id="C、当积分变成0时，参数更新不了了，停下来"><a href="#C、当积分变成0时，参数更新不了了，停下来" class="headerlink" title="C、当积分变成0时，参数更新不了了，停下来"></a>C、当积分变成0时，参数更新不了了，停下来</h3><p>弊端：当loss的图像很复杂，有多个弯儿时，到不了最低的地方，在平滑处或第一个不是最低的沟里停下来，但线性模型并不存在这个问题。</p>
 <h1 id="三、举例解决regression的问题：宝可梦进化（改良版）"><a href="#三、举例解决regression的问题：宝可梦进化（改良版）" class="headerlink" title="三、举例解决regression的问题：宝可梦进化（改良版）"></a>三、举例解决regression的问题：宝可梦进化（改良版）</h1><p>基础版是为了方便理解，但效果并不好，还需一些改良。<br>效果不好时，首先要检查下训练集上的效果好不好，其次再检查测试集上的效果好不好。</p>
 <h2 id="（一）训练集上不好："><a href="#（一）训练集上不好：" class="headerlink" title="（一）训练集上不好："></a>（一）训练集上不好：</h2><h3 id="1、加二次项、三次项等：y-b-w1x1-w2-x1-2-w3-x1-3，图像如下："><a href="#1、加二次项、三次项等：y-b-w1x1-w2-x1-2-w3-x1-3，图像如下：" class="headerlink" title="1、加二次项、三次项等：y=b+w1x1+w2(x1)^2+w3*(x1)^3，图像如下："></a>1、加二次项、三次项等：y=b+w1<em>x1+w2</em>(x1)^2+w3*(x1)^3，图像如下：</h3><p><img src="../../images/图片1.png" alt="Alt text"></p>
-<h3 id="2、加其他特征：y-b-w1x1-w2x2-w3-x3（x1-x2-x3都是特征）"><a href="#2、加其他特征：y-b-w1x1-w2x2-w3-x3（x1-x2-x3都是特征）" class="headerlink" title="2、加其他特征：y=b+w1x1+w2x2+w3*x3（x1,x2,x3都是特征）"></a>2、加其他特征：y=b+w1<em>x1+w2</em>x2+w3*x3（x1,x2,x3都是特征）</h3><h3 id="3、与种类相关的时："><a href="#3、与种类相关的时：" class="headerlink" title="3、与种类相关的时："></a>3、与种类相关的时：</h3><p><img src="../../images/图片2.png" alt="Alt text"><br><img src="../../images/图片3.png" alt="Alt text"><br><img src="../../images/图片4.png" alt="Alt text"><br>图像如下：<br><img src="../../images/图片5.png" alt="Alt text"></p>
+<h3 id="2、加其他特征：y-b-w1x1-w2x2-w3-x3（x1-x2-x3都是特征）"><a href="#2、加其他特征：y-b-w1x1-w2x2-w3-x3（x1-x2-x3都是特征）" class="headerlink" title="2、加其他特征：y=b+w1x1+w2x2+w3*x3（x1,x2,x3都是特征）"></a>2、加其他特征：y=b+w1<em>x1+w2</em>x2+w3*x3（x1,x2,x3都是特征）</h3><h3 id="3、与种类相关的时："><a href="#3、与种类相关的时：" class="headerlink" title="3、与种类相关的时："></a>3、与种类相关的时：</h3><p><img src="../../images/图片3.png" alt="Alt text"><br><img src="../../images/图片4.png" alt="Alt text"><br>图像如下：<br><img src="../../images/图片5.png" alt="Alt text"></p>
 <h2 id="（二）测试集上不好："><a href="#（二）测试集上不好：" class="headerlink" title="（二）测试集上不好："></a>（二）测试集上不好：</h2><h3 id="1、加大数据量"><a href="#1、加大数据量" class="headerlink" title="1、加大数据量"></a>1、加大数据量</h3><h3 id="2、Regularization：在loss原来的式子上加上W平方的和，这样的话，找到的理论上的参数不仅loss最小，而且曲线更平滑，与实际上的最小值更符合，但训练集的效果可能受损。"><a href="#2、Regularization：在loss原来的式子上加上W平方的和，这样的话，找到的理论上的参数不仅loss最小，而且曲线更平滑，与实际上的最小值更符合，但训练集的效果可能受损。" class="headerlink" title="2、Regularization：在loss原来的式子上加上W平方的和，这样的话，找到的理论上的参数不仅loss最小，而且曲线更平滑，与实际上的最小值更符合，但训练集的效果可能受损。"></a>2、Regularization：在loss原来的式子上加上W平方的和，这样的话，找到的理论上的参数不仅loss最小，而且曲线更平滑，与实际上的最小值更符合，但训练集的效果可能受损。</h3><h1 id="四、梯度下降tip"><a href="#四、梯度下降tip" class="headerlink" title="四、梯度下降tip"></a>四、梯度下降tip</h1><h2 id="1、Adagrad"><a href="#1、Adagrad" class="headerlink" title="1、Adagrad"></a>1、Adagrad</h2><p>不会使learning rate过大或过小而找不到最低点。<br>方法：<br><img src="../../images/图片6.png" alt="Alt text"><br><img src="../../images/图片7.png" alt="Alt text"></p>
 <h2 id="2、Stochastic"><a href="#2、Stochastic" class="headerlink" title="2、Stochastic"></a>2、Stochastic</h2><p>只抽出训练集中的一个数据算loss，梯度下降找最低点的参数，这样比那种要看完所有数据再loss的普通梯度下降速度快。</p>
 <h2 id="3、feature-scaling"><a href="#3、feature-scaling" class="headerlink" title="3、feature scaling"></a>3、feature scaling</h2><p>Y=b+w1<em>x1+w2</em>x2，当x1，x2差距很大时，图像1，减小他们之间的差距后图像2，图2更容易梯度下降。<br>缩小差距的方法如图，<br><img src="../../images/图片8.png" alt="Alt text"><br><img src="../../images/图片9.png" alt="Alt text"></p>
@@ -510,7 +757,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
