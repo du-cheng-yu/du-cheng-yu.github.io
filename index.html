@@ -229,6 +229,254 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/17/李宏毅机器学习6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="杜成玉">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="学习札记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/17/李宏毅机器学习6/" itemprop="url">李宏毅机器学习梳理6</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-17T19:46:26+08:00">
+                2018-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="semi-supervised-learning的方法"><a href="#semi-supervised-learning的方法" class="headerlink" title="semi-supervised learning的方法"></a>semi-supervised learning的方法</h1><p>semi-supervised learning的数据有带标签的数据和不带标签的数据，以下的方法主要是分类，class1,class2。</p>
+<h2 id="1、semi-supervised-generative-model"><a href="#1、semi-supervised-generative-model" class="headerlink" title="1、semi-supervised generative model"></a>1、semi-supervised generative model</h2><p><img src="https://i.loli.net/2018/05/17/5afd827120aee.jpg" alt=""><br>X^r是有标签的输入，X^u是没有标签的输入。<br>首先求没标签的X可能是C1（class1）的概率；<br>接着求所有数据属于c1的概率，即用属于c1、带标签的X的个数加上第一步求得概率总和除上全部数据；<br>再求带标签的X之和的平均数，再加上图上后面那个式子<br>剩下的同理。</p>
+<h2 id="2、low-density-separation（低密度分割）"><a href="#2、low-density-separation（低密度分割）" class="headerlink" title="2、low-density separation（低密度分割）"></a>2、low-density separation（低密度分割）</h2><p>原理：将分割线画在点密度较低的地方。<br><img src="https://i.loli.net/2018/05/17/5afd85660a285.jpg" alt=""><br>方法：用带标签的数据先训练处一个模型，接着用这个模型找到没有标签的数据的标签，然后将这部分数据加入到原来的数据中接着训练模型。</p>
+<h2 id="3、entropy-based-regularization"><a href="#3、entropy-based-regularization" class="headerlink" title="3、entropy-based regularization"></a>3、entropy-based regularization</h2><p>首先将没标签的X通过network之后得到一个分布，接着看这个分布的熵；<br>接着用图中公式求出熵；<br>然后在loss中加入这个熵。<br><img src="https://i.loli.net/2018/06/21/5b2b128fb575e.jpg" alt=""><br>原理就是让熵越小越好，因为熵越小越不平均，分类效果就好。</p>
+<h2 id="4、smoothess-assumption"><a href="#4、smoothess-assumption" class="headerlink" title="4、smoothess assumption"></a>4、smoothess assumption</h2><p>大致原理：如果X1和X2中间有很多密集的点，那他俩可能是一类；反之，如果他们之间的点比较稀疏，那就可能不是一类。因为如果他们之间的点密集，那就说明他们之间有很多过渡的点，所以有可能是一类，这也就是加入不带标签的数据的好处，可以通过很多数据看到过渡的情况，以此来提高分类效果，如图<br>大致方法：将带标签数据和不带标签数据一起聚类，这些类中带标签的数据是哪类，那些不带标签的数据就是哪类。<br><img src="https://i.loli.net/2018/06/21/5b2b12ade0449.jpg" alt=""></p>
+<h2 id="5、Gragh-based-approach"><a href="#5、Gragh-based-approach" class="headerlink" title="5、Gragh based approach"></a>5、Gragh based approach</h2><p>首先定义两个点的相似度；建边界（k最近邻）；给边界加权重（高斯径向基函数gaussian radial basis function）；定义标签的平滑度S，让S越小越好；将S加到loss中去训练出最好的模型。<br><img src="https://i.loli.net/2018/06/21/5b2b12cf57089.jpg" alt=""><br><img src="https://i.loli.net/2018/06/21/5b2b12f15f38b.jpg" alt=""><br><img src="https://i.loli.net/2018/06/21/5b2b13091906e.jpg" alt=""><br><img src="https://i.loli.net/2018/06/21/5b2b131ce9569.jpg" alt=""></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/17/李宏毅机器学习5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="杜成玉">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="学习札记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/17/李宏毅机器学习5/" itemprop="url">李宏毅机器学习梳理5</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-17T08:54:37+08:00">
+                2018-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="why-CNN-not-全连接？"><a href="#why-CNN-not-全连接？" class="headerlink" title="why CNN not 全连接？"></a>why CNN not 全连接？</h1><p>1、只用一个小区域，不用全部区域<br>2、同样的东西出现在不同区域<br>3、将图片缩小，但同样的能识别<br>以上情况有用CNN。</p>
+<h1 id="CNN结构"><a href="#CNN结构" class="headerlink" title="CNN结构"></a>CNN结构</h1><p>1、卷积层<br>2、池化层<br>3、扁平化</p>
+<h1 id="检查模型是怎样训练的"><a href="#检查模型是怎样训练的" class="headerlink" title="检查模型是怎样训练的"></a>检查模型是怎样训练的</h1><p>激活度：第K个filter形成的矩阵之和为激活度。<br>找个input X使激活度最高（用梯度下降去做），这样做的目的是找个与filter最像的图像，这样就知道各个filter在干嘛。<br>找个input X使神经元值最高（用梯度下降去做），这样做的目的是找个与神经元最像的图像，这样就知道各个神经元在干嘛。但这样得出的图像可能有些乱，看不出是什么，这时可以加个平滑化。<br><img src="https://i.loli.net/2018/05/17/5afcdbcaa1d5c.jpg" alt=""><br>还可看微分的值，微分越大，说明越重要，由此来看图像是什么样。<br><img src="https://i.loli.net/2018/05/17/5afcdcda2071e.jpg" alt=""></p>
+<h1 id="模组化"><a href="#模组化" class="headerlink" title="模组化"></a>模组化</h1><p>当training data较小时，可用模组化，先做基本分类，然后再分类。<br><img src="https://i.loli.net/2018/05/17/5afce8e2f2cb6.jpg" alt=""></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/03/李宏毅机器学习3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -877,7 +1125,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

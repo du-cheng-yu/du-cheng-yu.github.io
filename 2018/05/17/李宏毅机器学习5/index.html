@@ -79,23 +79,21 @@
 
 
 
-<meta name="description" content="原文地址：http://pinkyjie.com/2010/08/31/covariance/">
+<meta name="description" content="why CNN not 全连接？1、只用一个小区域，不用全部区域2、同样的东西出现在不同区域3、将图片缩小，但同样的能识别以上情况有用CNN。 CNN结构1、卷积层2、池化层3、扁平化 检查模型是怎样训练的激活度：第K个filter形成的矩阵之和为激活度。找个input X使激活度最高（用梯度下降去做），这样做的目的是找个与filter最像的图像，这样就知道各个filter在干嘛。找个input">
 <meta property="og:type" content="article">
-<meta property="og:title" content="协方差矩阵">
-<meta property="og:url" content="http://yoursite.com/2018/04/27/协方差矩阵/index.html">
+<meta property="og:title" content="李宏毅机器学习梳理5">
+<meta property="og:url" content="http://yoursite.com/2018/05/17/李宏毅机器学习5/index.html">
 <meta property="og:site_name" content="学习札记">
-<meta property="og:description" content="原文地址：http://pinkyjie.com/2010/08/31/covariance/">
+<meta property="og:description" content="why CNN not 全连接？1、只用一个小区域，不用全部区域2、同样的东西出现在不同区域3、将图片缩小，但同样的能识别以上情况有用CNN。 CNN结构1、卷积层2、池化层3、扁平化 检查模型是怎样训练的激活度：第K个filter形成的矩阵之和为激活度。找个input X使激活度最高（用梯度下降去做），这样做的目的是找个与filter最像的图像，这样就知道各个filter在干嘛。找个input">
 <meta property="og:locale" content="zh-Hans //语言 中文">
-<meta property="og:image" content="http://yoursite.com/2018/04/images/微信图片1.png">
-<meta property="og:image" content="http://yoursite.com/2018/04/images/微信图片2.png">
-<meta property="og:image" content="http://yoursite.com/2018/04/images/微信图片3.png">
-<meta property="og:image" content="http://yoursite.com/2018/04/images/微信图片4.png">
-<meta property="og:image" content="http://yoursite.com/2018/04/images/微信图片5.png">
-<meta property="og:updated_time" content="2018-04-27T09:26:31.705Z">
+<meta property="og:image" content="https://i.loli.net/2018/05/17/5afcdbcaa1d5c.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/05/17/5afcdcda2071e.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/05/17/5afce8e2f2cb6.jpg">
+<meta property="og:updated_time" content="2018-05-17T02:35:49.136Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="协方差矩阵">
-<meta name="twitter:description" content="原文地址：http://pinkyjie.com/2010/08/31/covariance/">
-<meta name="twitter:image" content="http://yoursite.com/2018/04/images/微信图片1.png">
+<meta name="twitter:title" content="李宏毅机器学习梳理5">
+<meta name="twitter:description" content="why CNN not 全连接？1、只用一个小区域，不用全部区域2、同样的东西出现在不同区域3、将图片缩小，但同样的能识别以上情况有用CNN。 CNN结构1、卷积层2、池化层3、扁平化 检查模型是怎样训练的激活度：第K个filter形成的矩阵之和为激活度。找个input X使激活度最高（用梯度下降去做），这样做的目的是找个与filter最像的图像，这样就知道各个filter在干嘛。找个input">
+<meta name="twitter:image" content="https://i.loli.net/2018/05/17/5afcdbcaa1d5c.jpg">
 
 
 
@@ -125,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/27/协方差矩阵/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/17/李宏毅机器学习5/"/>
 
 
 
 
 
-  <title>协方差矩阵 | 学习札记</title>
+  <title>李宏毅机器学习梳理5 | 学习札记</title>
   
 
 
@@ -238,7 +236,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/协方差矩阵/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/17/李宏毅机器学习5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杜成玉">
@@ -255,7 +253,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">协方差矩阵</h1>
+          <h1 class="post-title" itemprop="name headline">李宏毅机器学习梳理5</h1>
         
 
         <div class="post-meta">
@@ -267,8 +265,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-27T17:20:28+08:00">
-                2018-04-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-17T08:54:37+08:00">
+                2018-05-17
               </time>
             
 
@@ -305,8 +303,10 @@
       
 
       
-        <p><img src="../../images/微信图片1.png" alt="Alt text"><br><img src="../../images/微信图片2.png" alt="Alt text"><br><img src="../../images/微信图片3.png" alt="Alt text"><br><img src="../../images/微信图片4.png" alt="Alt text"><br><img src="../../images/微信图片5.png" alt="Alt text"></p>
-<h1 id="原文地址："><a href="#原文地址：" class="headerlink" title="原文地址："></a>原文地址：</h1><p><a href="http://pinkyjie.com/2010/08/31/covariance/" target="_blank" rel="noopener">http://pinkyjie.com/2010/08/31/covariance/</a></p>
+        <h1 id="why-CNN-not-全连接？"><a href="#why-CNN-not-全连接？" class="headerlink" title="why CNN not 全连接？"></a>why CNN not 全连接？</h1><p>1、只用一个小区域，不用全部区域<br>2、同样的东西出现在不同区域<br>3、将图片缩小，但同样的能识别<br>以上情况有用CNN。</p>
+<h1 id="CNN结构"><a href="#CNN结构" class="headerlink" title="CNN结构"></a>CNN结构</h1><p>1、卷积层<br>2、池化层<br>3、扁平化</p>
+<h1 id="检查模型是怎样训练的"><a href="#检查模型是怎样训练的" class="headerlink" title="检查模型是怎样训练的"></a>检查模型是怎样训练的</h1><p>激活度：第K个filter形成的矩阵之和为激活度。<br>找个input X使激活度最高（用梯度下降去做），这样做的目的是找个与filter最像的图像，这样就知道各个filter在干嘛。<br>找个input X使神经元值最高（用梯度下降去做），这样做的目的是找个与神经元最像的图像，这样就知道各个神经元在干嘛。但这样得出的图像可能有些乱，看不出是什么，这时可以加个平滑化。<br><img src="https://i.loli.net/2018/05/17/5afcdbcaa1d5c.jpg" alt=""><br>还可看微分的值，微分越大，说明越重要，由此来看图像是什么样。<br><img src="https://i.loli.net/2018/05/17/5afcdcda2071e.jpg" alt=""></p>
+<h1 id="模组化"><a href="#模组化" class="headerlink" title="模组化"></a>模组化</h1><p>当training data较小时，可用模组化，先做基本分类，然后再分类。<br><img src="https://i.loli.net/2018/05/17/5afce8e2f2cb6.jpg" alt=""></p>
 
       
     </div>
@@ -331,8 +331,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/27/李宏毅机器学习梳理2/" rel="next" title="李宏毅机器学习梳理2">
-                <i class="fa fa-chevron-left"></i> 李宏毅机器学习梳理2
+              <a href="/2018/05/03/李宏毅机器学习3/" rel="next" title="李宏毅机器学习3">
+                <i class="fa fa-chevron-left"></i> 李宏毅机器学习3
               </a>
             
           </div>
@@ -341,8 +341,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/03/李宏毅机器学习3/" rel="prev" title="李宏毅机器学习3">
-                李宏毅机器学习3 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/17/李宏毅机器学习6/" rel="prev" title="李宏毅机器学习梳理6">
+                李宏毅机器学习梳理6 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -457,7 +457,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#原文地址："><span class="nav-number">1.</span> <span class="nav-text">原文地址：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#why-CNN-not-全连接？"><span class="nav-number">1.</span> <span class="nav-text">why CNN not 全连接？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CNN结构"><span class="nav-number">2.</span> <span class="nav-text">CNN结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#检查模型是怎样训练的"><span class="nav-number">3.</span> <span class="nav-text">检查模型是怎样训练的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模组化"><span class="nav-number">4.</span> <span class="nav-text">模组化</span></a></li></ol></div>
             
 
           </div>
